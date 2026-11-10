@@ -179,11 +179,4 @@ firebase deploy --only hosting --project YOUR_PROJECT_ID
 
 Hosting deployment does not configure Firestore rules or provision a Gemini backend. Ensure the Firebase web configuration, Maps restrictions, and build-time Gemini configuration match the environment you intend to deploy.
 
-## Current limitations
-
-- No emergency-service dispatch, SMS, push notification, or responder integration is implemented.
-- No user authentication, roles, or per-user incident filtering is implemented. Clients query the same collection, subject to Firestore access rules.
-- Incident coordinates are stored in Firestore when available, and guidance prompts are sent to Google's Gemini API. Consider these data flows when planning access and privacy controls.
-- Speech features depend on browser support and permissions. Recognition is configured for `en-US`.
-- The Maps component expects the Google Maps script to be available when location arrives; it does not implement a script-load retry.
 
